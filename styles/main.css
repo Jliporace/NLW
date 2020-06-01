@@ -1,0 +1,16 @@
+html {
+font-family: 'Roboto', sans-serif;
+}
+
+/* BOX MODEL
+
+Modelo de caixa: toda caixa tem largura, altura,
+espaçamento, preenchimento, bordas, cor... (display)
+
+a: apenas a largura do texto */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
