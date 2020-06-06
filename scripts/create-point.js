@@ -56,7 +56,8 @@ for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
-let selectedItems = [1,2]
+const collectedItems = document.querySelector("input[name=items]")
+let selectedItems = []
 
 function handleSelectedItem(event) {
 
@@ -66,16 +67,29 @@ function handleSelectedItem(event) {
 
     const itemId = itemLi.dataset.id
 
-    // Não entendi
 
     //pegar os items selecionados
     const alreadySelected = selectedItems.findIndex( item => {
-        const itemFound = item == itemId 
+        const itemFound = item === itemId 
         return itemFound
     })
 
-    console.log(alreadySelected)
 
     //se já estiver selecionado, tirar da seleção
+    if(alreadySelected >= 0) {
+        const filteredItems = selectedItems.filter(item => {
+            const itemIsDifferent = item != itemId
+            return itemIsDifferent
+        })
+        selectedItems = filteredItems
+    }
+
+    // se não estiver selecionado
+    // adicionar a seleção
+    else {
+        selectedItems.push(itemId)
+    }
+
+    collectedItems.value = selectedItems  //por que value? e por que muda se é const?
 
 }
