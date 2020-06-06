@@ -46,3 +46,36 @@ function getCities(event) {
 document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
+
+// Itens de coleta
+// pegar todos os li's
+
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+
+for (const item of itemsToCollect) {
+    item.addEventListener("click", handleSelectedItem)
+}
+
+let selectedItems = [1,2]
+
+function handleSelectedItem(event) {
+
+    const itemLi = event.target
+
+    itemLi.classList.toggle("selected")
+
+    const itemId = itemLi.dataset.id
+
+    // Não entendi
+
+    //pegar os items selecionados
+    const alreadySelected = selectedItems.findIndex( item => {
+        const itemFound = item == itemId 
+        return itemFound
+    })
+
+    console.log(alreadySelected)
+
+    //se já estiver selecionado, tirar da seleção
+
+}
