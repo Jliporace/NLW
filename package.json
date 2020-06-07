@@ -1,0 +1,26 @@
+{
+  "name": "NLW",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "description": "web application studies following NLW tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jliporace/NLW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jliporace/NLW/issues"
+  },
+  "homepage": "https://github.com/Jliporace/NLW#readme"
+}
